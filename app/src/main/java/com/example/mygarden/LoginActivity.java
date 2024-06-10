@@ -3,6 +3,7 @@ package com.example.mygarden;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,6 +18,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
 
 public class LoginActivity extends Activity {
 
@@ -47,6 +49,11 @@ public class LoginActivity extends Activity {
                                 Account account = task.getResult().getValue(Account.class);
                                 if( account !=null && account.getPassword().equals(password)){
                                     Intent intent = new Intent(LoginActivity.this,MainActivity.class);
+                                    SharedPreferences sharedPreferences=getSharedPreferences("file",MODE_PRIVATE);
+                                    SharedPreferences.Editor editor=sharedPreferences.edit();
+                                    editor.putString("Login_done","yes");
+                                    editor.putString("username",username);
+                                    editor.commit();
                                     startActivity(intent);
                                 }else{
                                     Toast.makeText(LoginActivity.this,"Error Password",Toast.LENGTH_LONG).show();
