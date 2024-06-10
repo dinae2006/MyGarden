@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "452204811592",
+    "firebase_url": "https://mygarden-aebda-default-rtdb.firebaseio.com",
+    "project_id": "mygarden-aebda",
+    "storage_bucket": "mygarden-aebda.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:452204811592:android:f104727e34640530d6cf7d",
+        "android_client_info": {
+          "package_name": "com.example.mygarden"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQdps8ex3ynh2a5NBgUgud5FZ_VW9vB3g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
