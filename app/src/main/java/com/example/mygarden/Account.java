@@ -16,6 +16,9 @@ public class Account {
         //aaaaa
     }
 
+    public Account() {
+    }
+
     public String getFirstName() {
         return firstName;
     }

@@ -54,8 +54,8 @@ public class RegisterActivity extends Activity {
                                 Account account = new Account(firstName, lastName, email, userName, pwd);
                                 databaseReference.child(userName).setValue(account);
                                 Intent data = new Intent();
-                                data.putExtra("userName", userName);
-                                data.putExtra("pwd", pwd);
+                                data.putExtra("username", userName);
+                                data.putExtra("password", pwd);
                                 setResult(RESULT_OK, data);
                                 finish();
                             }
