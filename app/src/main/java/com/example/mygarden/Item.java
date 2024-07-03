@@ -1,7 +1,7 @@
 package com.example.mygarden;
 
 public class Item {
-    private int imageID;
+    private String imageID;
     private String storeName;
     private String plantName;
     private String describe;
@@ -10,7 +10,7 @@ public class Item {
     public Item() {
     }
 
-    public Item(int imageID, String storeName, String plantName, String describe, String key) {
+    public Item(String imageID, String storeName, String plantName, String describe, String key) {
         this.imageID = imageID;
         this.storeName = storeName;
         this.plantName = plantName;
@@ -18,11 +18,12 @@ public class Item {
         this.key = key;
     }
 
-    public int getImageID() {
+
+    public String getImageID() {
         return imageID;
     }
 
-    public void setImageID(int imageID) {
+    public void setImageID(String imageID) {
         this.imageID = imageID;
     }
 

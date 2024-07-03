@@ -10,6 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.List;
 
 public class RecyclerViewAdaptor extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
@@ -35,6 +37,8 @@ public class RecyclerViewAdaptor extends RecyclerView.Adapter<RecyclerView.ViewH
         itemHolder.description.setText(itemList.get(position).getDescribe());
         itemHolder.plantName.setText(itemList.get(position).getPlantName());
         itemHolder.storeName.setText(itemList.get(position).getStoreName());
+        Glide.with(mainActivity).load(itemList.get(position).getImageID()).into(itemHolder.plantImage);
+
     }
 
     @Override
@@ -48,6 +52,8 @@ public class RecyclerViewAdaptor extends RecyclerView.Adapter<RecyclerView.ViewH
         TextView description;
         TextView plantName;
         TextView storeName;
+        ImageView image;
+
 
         public ItemHolder(@NonNull View itemView) {
             super(itemView);
@@ -55,6 +61,10 @@ public class RecyclerViewAdaptor extends RecyclerView.Adapter<RecyclerView.ViewH
             plantName=itemView.findViewById(R.id.plantNameTV);
             description=itemView.findViewById(R.id.describeTV);
             storeName=itemView.findViewById(R.id.storeNameTV);
+            image=itemView.findViewById(R.id.PlantImage);
+
+
+
         }
     }
 }

@@ -17,7 +17,7 @@ public class StartUpScreen extends Activity implements Runnable {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_up_screen);
-        Thread thread=new Thread();
+        Thread thread=new Thread(this);
         thread.start();
     }
 
