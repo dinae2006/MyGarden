@@ -1,14 +1,33 @@
 {
   "project_info": {
-    "project_number": "452204811592",
-    "firebase_url": "https://mygarden-aebda-default-rtdb.firebaseio.com",
-    "project_id": "mygarden-aebda",
-    "storage_bucket": "mygarden-aebda.appspot.com"
+    "project_number": "778601723245",
+    "firebase_url": "https://mygarden1-16cb7-default-rtdb.firebaseio.com",
+    "project_id": "mygarden1-16cb7",
+    "storage_bucket": "mygarden1-16cb7.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:452204811592:android:f104727e34640530d6cf7d",
+        "mobilesdk_app_id": "1:778601723245:android:1080be56c52589e8f2d664",
+        "android_client_info": {
+          "package_name": "com.example.my_garden"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyY8Oo_X5qZE_P8EjPe0H6aaM6AaLFeIY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:778601723245:android:0063841cdbfc4788f2d664",
         "android_client_info": {
           "package_name": "com.example.mygarden"
         }
@@ -16,7 +35,26 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAQdps8ex3ynh2a5NBgUgud5FZ_VW9vB3g"
+          "current_key": "AIzaSyCyY8Oo_X5qZE_P8EjPe0H6aaM6AaLFeIY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:778601723245:android:bd2006cbfd2773aef2d664",
+        "android_client_info": {
+          "package_name": "com.example.mygardenstores"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyY8Oo_X5qZE_P8EjPe0H6aaM6AaLFeIY"
         }
       ],
       "services": {
