@@ -6,9 +6,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -25,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private List<Item> itemList;
     private  RecyclerViewAdaptor recyclerViewAdaptor;
+    private ImageButton logOutBTN;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         databaseReference= FirebaseDatabase.getInstance().getReference().child("Plant");
         recyclerView =findViewById(R.id.recyclerView);
+        logOutBTN=findViewById(R.id.logout);
         itemList=new ArrayList<Item>();
 
         recyclerViewAdaptor=new RecyclerViewAdaptor(itemList,MainActivity.this);
@@ -40,7 +46,17 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(recyclerViewAdaptor);
 
-
+        logOutBTN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferences sharedPreferences=getSharedPreferences("file",MODE_PRIVATE);
+                SharedPreferences.Editor editor=sharedPreferences.edit();
+                editor.remove("Login_done");
+                editor.commit();
+                Intent intent=new Intent(MainActivity.this,StartUpScreen.class);
+                startActivity(intent);
+            }
+        });
         databaseReference.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
